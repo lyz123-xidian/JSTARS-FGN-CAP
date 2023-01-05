@@ -1,6 +1,7 @@
 Feature guide network with Context Aggregation Pyramid for Remote Sensing Image Segmentation, JSTARS, 2022.
 ==
 [Jiaojiao Li](https://scholar.google.com/citations?user=Ccu3-acAAAAJ&hl=zh-CN&oi=sra), [Yuzhe Liu](https://github.com/lyz123-xidian), Jiacha Liu, [Rui song](https://scholar.google.com/citations?user=_SKooBYAAAAJ&hl=zh-CN), Wei Liu, Kailiang Han and [Qian Du](https://scholar.google.com/citations?user=0OdKQoQAAAAJ&hl=zh-CN).
+- Feature Guide Network With Context Aggregation Pyramid for Remote Sensing Image Segmentation, IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, 2022, J. Li, Y. Liu, J. Liu, R. Song, W. Liu, K. Han and Q. Du, doi: 10.1109/JSTARS.2022.3221860.[[PDF]](https://ieeexplore.ieee.org/document/9947207)[[Code]](https://github.com/lyz123-xidian/TGRS-Sal2RN)
 ***
 Code for the paper: [Feature guide network with Context Aggregation Pyramid for Remote Sensing Image Segmentation](https://ieeexplore.ieee.org/document/9947207).
 
