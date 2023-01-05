@@ -1,17 +1,19 @@
-Sal2RN: A Spatial-Spectral Salient ReinforcementNetwork for Hyperspectral and LiDAR Data Fusion Classification, TGRS, 2022.
+Feature guide network with Context Aggregation Pyramid for Remote Sensing Image Segmentation, JSTARS, 2022.
 ==
-[Jiaojiao Li](https://scholar.google.com/citations?user=Ccu3-acAAAAJ&hl=zh-CN&oi=sra), [Yuzhe Liu](https://github.com/lyz123-xidian), [Rui song](https://scholar.google.com/citations?user=_SKooBYAAAAJ&hl=zh-CN), [Yunsong Li](https://dblp.uni-trier.de/pid/87/5840.html), Kailiang Han and [Qian Du](https://scholar.google.com/citations?user=0OdKQoQAAAAJ&hl=zh-CN).
+[Jiaojiao Li](https://scholar.google.com/citations?user=Ccu3-acAAAAJ&hl=zh-CN&oi=sra), [Yuzhe Liu](https://github.com/lyz123-xidian), Jiacha Liu, [Rui song](https://scholar.google.com/citations?user=_SKooBYAAAAJ&hl=zh-CN), Wei Liu, Kailiang Han and [Qian Du](https://scholar.google.com/citations?user=0OdKQoQAAAAJ&hl=zh-CN).
 ***
-Code for the paper: [Sal2RN: A Spatial-Spectral Salient ReinforcementNetwork for Hyperspectral and LiDAR Data Fusion Classification](https://ieeexplore.ieee.org/document/9998520).
+Code for the paper: [Feature guide network with Context Aggregation Pyramid for Remote Sensing Image Segmentation](https://ieeexplore.ieee.org/document/9947207).
 
-
-<div align=center><img src="/Image/framework.png" width="80%" height="80%"></div>
-Fig. 1: Framework of the proposed Sal2RN. It consists of two parts: multi-source feature extraction network and multi-source fusion classification network. Feature extraction is divided into three branches, in which CIM and CSCM are the cross-layer interaction module and center spectrum correction module respectively. The Dense Block is a four-layer dense connection structure, which is applied for initial spatial feature extraction.
+<div align=center><img src="/Image/fig.png" width="80%" height="80%"></div>
+Fig. 1: Our proposed network architecture. The network is based on encoder-decoder structure. In the encoder stage, edge and body information in the feature maps are extracted respectively constrained by corresponding loss function. The backbone is followed by a CAP to aggregate multi-scale context features adaptively. In the decoder stage, an EGFTM is used to help with upsampling to restore resolution.
 
 Training and Test Process
 --
-1) Please prepare the training and test data as operated in the paper. The datasets are Houston2013, Trento, MUUFL Gulfport. The data is placed under the 'data' folder. The file format is tif.
-2) Run "demo.py" to to reproduce the Sal2RN results on Trento data set.
+1) The data sets used in this article are Vaihingen, Potsdam, TianZhi, and Cityscapes.
+2) The network model file is placed in the 'models/net_work/final' folder and contains the ablation experiment network for each part.
+3) Run "train.py" to retrain the FGN-CAP results.
+4) Run "eval.py" to obtain the segmentation results of the training model
+5) "train_cityscapes.py" and "test_cityscape.py" are training and testing code designed against the cityscape dataset.
 
 We have successfully tested it on Ubuntu 18.04 with PyTorch 1.12.0.
 
@@ -19,21 +21,21 @@ References
 --
 If you find this code helpful, please kindly cite:
 
-[1]J. Li, Y. Liu, R. Song, Y. Li, K. Han and Q. Du, "Sal2RN: A Spatial-Spectral Salient Reinforcement Network for Hyperspectral and LiDAR Data Fusion Classification," in IEEE Transactions on Geoscience and Remote Sensing, doi: 10.1109/TGRS.2022.3231930.
+[1]J. Li et al., "Feature Guide Network With Context Aggregation Pyramid for Remote Sensing Image Segmentation," in IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, vol. 15, pp. 9900-9912, 2022, doi: 10.1109/JSTARS.2022.3221860.
 
 Citation Details
 --
 BibTeX entry:
 ```
-@ARTICLE{9998520,
-  author={Li, Jiaojiao and Liu, Yuzhe and Song, Rui and Li, Yunsong and Han, Kailiang and Du, Qian},
-  journal={IEEE Transactions on Geoscience and Remote Sensing}, 
-  title={Sal2RN: A Spatial-Spectral Salient Reinforcement Network for Hyperspectral and LiDAR Data Fusion Classification}, 
+@article{li2022feature,
+  title={Feature Guide Network With Context Aggregation Pyramid for Remote Sensing Image Segmentation},
+  author={Li, Jiaojiao and Liu, Yuzhe and Liu, Jiachao and Song, Rui and Liu, Wei and Han, Kailiang and Du, Qian},
+  journal={IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing},
+  volume={15},
+  pages={9900--9912},
   year={2022},
-  volume={},
-  number={},
-  pages={1-1},
-  doi={10.1109/TGRS.2022.3231930}}
+  publisher={IEEE}
+}
 ```
  
 Licensing
