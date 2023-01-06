@@ -14,7 +14,7 @@ Training and Test Process
 2) The network model file is placed in the 'models/net_work/final' folder and contains the ablation experiment network for each part.
 3) Run "train.py" to retrain the FGN-CAP results.
 4) Run "eval.py" to obtain the segmentation results of the training model
-5) "train_cityscapes.py" and "test_cityscape.py" are training and testing code designed against the cityscape dataset.
+5) "train_cityscapes.py" and "test_cityscape.py" are training and testing code designed for the cityscape dataset.
 
 We have successfully tested it on Ubuntu 18.04 with PyTorch 1.12.0.
 
